@@ -74,7 +74,8 @@ public class BackendManager {
 				return new Response(false, "Error, the quantity of an item inputted cannot be negative", toReturn);
 			} else if ((quantities.get(i) - cart.getItemQuantity(idsToModify.get(i))) > item.getStock()) {
 				ArrayList<String> toReturn = new ArrayList<String>();
-				toReturn.add("ID of failure: " + idsToModify.get(i).toString() + ", Stock remaining: " + item.getStock());
+				toReturn.add("ID of failure: " + idsToModify.get(i).toString() + ", Stock remaining: " + item.getStock()
+								+ ", Current Quantity In Cart: " + cart.getItemQuantity(idsToModify.get(i)));
 				cart = previousState;
 				return new Response(false, "Error: The quantity of an item exceeds the stock remaining (see returnList)", toReturn);
 			}
