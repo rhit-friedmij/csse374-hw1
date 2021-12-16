@@ -172,7 +172,7 @@ public class Cart {
 		return null;
 	}
 	
-	protected ArrayList<DiscountCode> returnCodes (){
+	protected ArrayList<DiscountCode> getCodes (){
 		return codes;
 	}
 }

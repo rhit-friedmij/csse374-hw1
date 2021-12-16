@@ -375,7 +375,7 @@ public class IntegrationTests {
 		Response r = bm.modifyQuantities(17, idsMod, quants);
 		
 		assertEquals(r.message, "Success: The inputted quantities of the specified items have been changed");
-		assertEquals(cart1.returnCodes().size(), 0);
+		assertEquals(cart1.getCodes().size(), 0);
 		EasyMock.verify(dbMock);
 	}
 }

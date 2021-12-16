@@ -8,19 +8,19 @@ public class QueryHandler {
 	}
 	
 	public ViewCart handleView(int cartId) {
-		return null;
+		return bm.returnCart(cartId);
 	}
 	
 	public Response handleAdd(int cartId, int itemId) {
-		return null;
+		return bm.addItem(cartId, itemId);
 	}
 	
 	public Response handleDiscount(int cartId, String discountCode) {
-		return null;
+		return bm.addDiscount(cartId, discountCode);
 	}
 	
 	public Response handleQuantityModification(int cartId, ArrayList<Integer> idsToModify, ArrayList<Integer> newQuantities) {
-		return null;
+		return bm.modifyQuantities(cartId, idsToModify, newQuantities);
 	}
 	
 }
